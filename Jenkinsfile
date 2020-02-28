@@ -10,6 +10,7 @@ pipeline {
     stage('Run') {
       steps {
         sh 'mvn spring-boot:run'
+        sh 'mvn spring-boot:stop'
       }
     }
 
