@@ -7,12 +7,6 @@ pipeline {
       }
     }
 
-    stage('Test') {
-      steps {
-        sh 'mvn clean package'
-      }
-    }
-
     stage('Run') {
       steps {
         sh 'mvn spring-boot:run'
