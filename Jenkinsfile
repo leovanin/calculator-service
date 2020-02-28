@@ -13,12 +13,6 @@ pipeline {
       }
     }
 
-    stage('Deploy') {
-      steps {
-        sh 'mvn clean deploy'
-      }
-    }
-
   }
   environment {
     localhost = 'localhost'
