@@ -7,6 +7,18 @@ pipeline {
       }
     }
 
+    stage('Test') {
+      steps {
+        sh 'mvn clean test'
+      }
+    }
+
+    stage('Deploy') {
+      steps {
+        sh 'mvn clean deploy'
+      }
+    }
+
   }
   environment {
     localhost = 'localhost'
